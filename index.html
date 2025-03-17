@@ -3,25 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css">
+
     <title>배경색 변경 연습</title>
     <style>
         body {
+            font-family: "Pretendard Variable", sans-serif;
             background-color: lightyellow;
             transition: all 1s;
-        }
-        .bgcolor--blue {
-            background-color: lightblue;
-        }
-        .bgcolor--gray {
-            background-color: lightgray;
-        }
+        } 
+
+        
         .btns {
             position: relative;
             top: 60px;
-            width: 600px;
             margin: auto;
             text-align: center;
-        }
+        } /* 버튼 묶기 */
+
+        
+        button {
+            font-family: "Pretendard Variable", sans-serif;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin: 10px;
+        } /* 각 버튼 디자인 */
+
+
+        
+        .btn_toggle {
+            background-color: royalblue;
+            color: white;
+        } /* 토글 버튼*/
+
+        .btn_toggle:hover {
+            background-color: dodgerblue;
+        } /* 토글 버튼 호버했을 때*/
+
+        .bgcolor--blue {
+            background-color: lightblue;
+        } /* 파란색 배경 */
+
+      
+
+        .btn-reset {
+            background-color: crimson;
+            color: white;
+        } /* 리셋 버튼*/
+
+        .btn-reset:hover {
+            background-color: red;
+        } /* 리셋 버튼 호버했을 때*/
+
+      
+        
+        .btn-bggray {
+            background-color: gray;
+            color: white;
+        } /* 그레이 버튼 - 회색 */
+
+        .btn-bggray:hover {
+            background-color: darkgray;
+        } /* 그레이 버튼 호버했을 때*/
+
+        .bgcolor--gray {
+            background-color: lightgray;
+        } /* 회색 배경 */
+
+        
+
+
+
     </style>
 </head>
 <body>
@@ -34,23 +90,23 @@
     <script>
         const btnToggle = document.querySelector('.btn_toggle');
         btnToggle.addEventListener('click', function () {
+            document.body.classList.remove('bgcolor--gray');
             document.body.classList.toggle('bgcolor--blue');
             console.log('버튼클릭');
-        }); // 토글 버튼 실행
-
+        }); // blue toggle button
 
         const btnReset = document.querySelector('.btn-reset');
         btnReset.addEventListener('click', function () {
             document.body.classList.remove('bgcolor--blue');
             document.body.classList.remove('bgcolor--gray');
-        }); // 리셋 버튼 실행
+        }); // reset button 
 
         
         const btnBgGray = document.querySelector('.btn-bggray');
 
         btnBgGray.addEventListener('click', function () {
             document.body.classList.add('bgcolor--gray');
-        }); // 그레이버튼 실행
+        }); // grayify button
     </script>
 </body>
 </html>
