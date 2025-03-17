@@ -36,19 +36,21 @@
         btnToggle.addEventListener('click', function () {
             document.body.classList.toggle('bgcolor--blue');
             console.log('버튼클릭');
-        });
+        }); // 토글 버튼 실행
+
 
         const btnReset = document.querySelector('.btn-reset');
-        const btnBgGray = document.querySelector('.btn-bggray');
-
         btnReset.addEventListener('click', function () {
             document.body.classList.remove('bgcolor--blue');
             document.body.classList.remove('bgcolor--gray');
-        });
+        }); // 리셋 버튼 실행
+
+        
+        const btnBgGray = document.querySelector('.btn-bggray');
 
         btnBgGray.addEventListener('click', function () {
             document.body.classList.add('bgcolor--gray');
-        });
+        }); // 그레이버튼 실행
     </script>
 </body>
 </html>
